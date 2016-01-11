@@ -1,0 +1,23 @@
+####################
+# Assignment 1
+####################
+
+Overall: 100.0/100
+====================
+Test Case: [function=basic_tests]	[50/50]
+	
+====================
+Test Case: [function=heur_test]	[17.0/17]
+	
+====================
+Test Case: [function=init_test]	[5.0/5]
+	
+====================
+Test Case: [function=order_test]	[9.0/9]
+	
+====================
+Test Case: [function=succ_test]	[9.0/9]
+	
+====================
+Test Case: [function=time_test]	[10.0/10]
+	

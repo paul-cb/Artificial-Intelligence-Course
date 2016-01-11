@@ -1,0 +1,157 @@
+Search Successful!
+   Strategy = 'astar with full cycle checking'
+   Solution cost = 54
+   Goal state: Action= "move_forward(54)", S48, g-value = 54, (From S47)
+Time = 54
+Unfulfilled Orders
+Robot Status
+    r1 is idle at location (20, 10)
+    r2 is idle at location (20, 20)
+    r3 is idle at location (20, 0)
+----------------------------
+Solution Path:
+Action= "START()", S0, g-value = 0, (Initial State)
+Time = 0
+Unfulfilled Orders
+    prod1 ==> pack1
+    prod2 ==> pack2
+    prod3 ==> pack3
+Robot Status
+    r1 is on_delivery will be at location (20, 10) at time 14
+    r2 is on_delivery will be at location (20, 20) at time 8
+    r3 is on_delivery will be at location (20, 0) at time 8
+ ==> Action= "move_forward(8)", S1, g-value = 8, (From S0)
+Time = 8
+Unfulfilled Orders
+    prod1 ==> pack1
+    prod2 ==> pack2
+    prod3 ==> pack3
+Robot Status
+    r1 is on_delivery will be at location (20, 10) at time 14
+    r2 is idle at location (20, 20)
+    r3 is idle at location (20, 0)
+ ==> Action= "deliver(r3,prod1,pack1)", S5, g-value = 8, (From S1)
+Time = 8
+Unfulfilled Orders
+    prod2 ==> pack2
+    prod3 ==> pack3
+Robot Status
+    r1 is on_delivery will be at location (20, 10) at time 14
+    r2 is idle at location (20, 20)
+    r3 is on_delivery will be at location (20, 0) at time 48
+ ==> Action= "deliver(r2,prod3,pack3)", S30, g-value = 8, (From S5)
+Time = 8
+Unfulfilled Orders
+    prod2 ==> pack2
+Robot Status
+    r1 is on_delivery will be at location (20, 10) at time 14
+    r2 is on_delivery will be at location (20, 20) at time 48
+    r3 is on_delivery will be at location (20, 0) at time 48
+ ==> Action= "move_forward(14)", S37, g-value = 14, (From S30)
+Time = 14
+Unfulfilled Orders
+    prod2 ==> pack2
+Robot Status
+    r1 is idle at location (20, 10)
+    r2 is on_delivery will be at location (20, 20) at time 48
+    r3 is on_delivery will be at location (20, 0) at time 48
+ ==> Action= "deliver(r1,prod2,pack2)", S38, g-value = 14, (From S37)
+Time = 14
+Unfulfilled Orders
+Robot Status
+    r1 is on_delivery will be at location (20, 10) at time 54
+    r2 is on_delivery will be at location (20, 20) at time 48
+    r3 is on_delivery will be at location (20, 0) at time 48
+ ==> Action= "move_forward(48)", S47, g-value = 48, (From S38)
+Time = 48
+Unfulfilled Orders
+Robot Status
+    r1 is on_delivery will be at location (20, 10) at time 54
+    r2 is idle at location (20, 20)
+    r3 is idle at location (20, 0)
+ ==> Action= "move_forward(54)", S48, g-value = 54, (From S47)
+Time = 54
+Unfulfilled Orders
+Robot Status
+    r1 is idle at location (20, 10)
+    r2 is idle at location (20, 20)
+    r3 is idle at location (20, 0)
+
+----------------------------
+Search time = 0.0, nodes expanded = 49, states generated = 49, states cycle check pruned = 0
+Search Successful!
+   Strategy = 'breadth_first with full cycle checking'
+   Solution cost = 54
+   Goal state: Action= "move_forward(54)", S647, g-value = 54, (From S247)
+Time = 54
+Unfulfilled Orders
+Robot Status
+    r1 is idle at location (20, 10)
+    r2 is idle at location (20, 20)
+    r3 is idle at location (20, 0)
+----------------------------
+Solution Path:
+Action= "START()", S0, g-value = 0, (Initial State)
+Time = 0
+Unfulfilled Orders
+    prod1 ==> pack1
+    prod2 ==> pack2
+    prod3 ==> pack3
+Robot Status
+    r1 is on_delivery will be at location (20, 10) at time 14
+    r2 is on_delivery will be at location (20, 20) at time 8
+    r3 is on_delivery will be at location (20, 0) at time 8
+ ==> Action= "move_forward(8)", S1, g-value = 8, (From S0)
+Time = 8
+Unfulfilled Orders
+    prod1 ==> pack1
+    prod2 ==> pack2
+    prod3 ==> pack3
+Robot Status
+    r1 is on_delivery will be at location (20, 10) at time 14
+    r2 is idle at location (20, 20)
+    r3 is idle at location (20, 0)
+ ==> Action= "move_forward(14)", S8, g-value = 14, (From S1)
+Time = 14
+Unfulfilled Orders
+    prod1 ==> pack1
+    prod2 ==> pack2
+    prod3 ==> pack3
+Robot Status
+    r1 is idle at location (20, 10)
+    r2 is idle at location (20, 20)
+    r3 is idle at location (20, 0)
+ ==> Action= "deliver(r1,prod2,pack2)", S28, g-value = 14, (From S8)
+Time = 14
+Unfulfilled Orders
+    prod1 ==> pack1
+    prod3 ==> pack3
+Robot Status
+    r1 is on_delivery will be at location (20, 10) at time 54
+    r2 is idle at location (20, 20)
+    r3 is idle at location (20, 0)
+ ==> Action= "deliver(r2,prod3,pack3)", S84, g-value = 14, (From S28)
+Time = 14
+Unfulfilled Orders
+    prod1 ==> pack1
+Robot Status
+    r1 is on_delivery will be at location (20, 10) at time 54
+    r2 is on_delivery will be at location (20, 20) at time 54
+    r3 is idle at location (20, 0)
+ ==> Action= "deliver(r3,prod1,pack1)", S247, g-value = 14, (From S84)
+Time = 14
+Unfulfilled Orders
+Robot Status
+    r1 is on_delivery will be at location (20, 10) at time 54
+    r2 is on_delivery will be at location (20, 20) at time 54
+    r3 is on_delivery will be at location (20, 0) at time 54
+ ==> Action= "move_forward(54)", S647, g-value = 54, (From S247)
+Time = 54
+Unfulfilled Orders
+Robot Status
+    r1 is idle at location (20, 10)
+    r2 is idle at location (20, 20)
+    r3 is idle at location (20, 0)
+
+----------------------------
+Search time = 0.030000000000000002, nodes expanded = 1359, states generated = 1359, states cycle check pruned = 0

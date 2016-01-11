@@ -1,0 +1,110 @@
+
+Running Test : Factor Restriction Test 1
+	[+] Scope of the resulting factor matches expected result
+	[+] Factor values match the expected result in all cases
+	Test marks: [3/3]
+
+Running Test : Factor Restriction Test 2
+	[+] Scope of the resulting factor matches expected result
+	[+] Factor values match the expected result in all cases
+	Test marks: [3/3]
+
+Running Test : Factor Restriction Test 3
+	[+] Scope of the resulting factor matches expected result
+	[+] Factor values match the expected result in all cases
+	Test marks: [2/2]
+
+Running Test : Factor Restriction Test 4
+	[+] Scope of the resulting factor matches expected result
+	[+] Factor values match the expected result in all cases
+	Test marks: [3/3]
+
+Running Test : Factor Restriction Test (Constant Factor Result)
+	[!] Execution error:
+	Test marks: [0/3]
+
+Running Test : Factor Sum Out Test 1
+	[+] Scope of the resulting factor matches expected result
+	[+] Factor values match the expected result in all cases
+	Test marks: [4/4]
+
+Running Test : Factor Sum Out Test 2
+	[+] Scope of the resulting factor matches expected result
+	[+] Factor values match the expected result in all cases
+	Test marks: [4/4]
+
+Running Test : Factor Sum Out Test 3
+	[+] Scope of the resulting factor matches expected result
+	[+] Factor values match the expected result in all cases
+	Test marks: [4/4]
+
+Running Test : Factor Sum Out Test 4
+	[+] Scope of the resulting factor matches expected result
+	[+] Factor values match the expected result in all cases
+	Test marks: [4/4]
+
+Running Test : Factor Sum Out Test (Constant Factor Result)
+	[!] Execution error:
+	Test marks: [0/3]
+
+Running Test : Factor Multiplication Test 1
+	[+] Scope of the resulting factor matches expected result
+	[+] Factor values match the expected result in all cases
+	Test marks: [5/5]
+
+Running Test : Factor Multiplication Test 2
+	[+] Scope of the resulting factor matches expected result
+	[+] Factor values match the expected result in all cases
+	Test marks: [5/5]
+
+Running Test : Factor Multiplication Test 3
+	[+] Scope of the resulting factor matches expected result
+	[+] Factor values match the expected result in all cases
+	Test marks: [5/5]
+
+Running Test : Factor Multiplication Test 4
+	[+] Scope of the resulting factor matches expected result
+	[+] Factor values match the expected result in all cases
+	Test marks: [5/5]
+
+Running Test : Factor Multiplication Test (No Common Variables)
+	[+] Scope of the resulting factor matches expected result
+	[+] Factor values match the expected result in all cases
+	Test marks: [3/3]
+
+Running Test : Variable Elimination Test 1
+	[+] Probability distribution of the query variable matches the expected results
+	Test marks: [5/5]
+
+Running Test : Variable Elimination Alteration Test (Repeat of 1)
+	[+] Probability distribution of the query variable matches the expected results
+	Test marks: [4/4]
+
+Running Test : Variable Elimination Test 2
+	[+] Probability distribution of the query variable matches the expected results
+	Test marks: [5/5]
+
+Running Test : Variable Elimination Test 3
+	[+] Probability distribution of the query variable matches the expected results
+	Test marks: [5/5]
+
+Running Test : Variable Elimination Test 4
+	[+] Probability distribution of the query variable matches the expected results
+	Test marks: [5/5]
+
+Running Test : Variable Elimination Test 5
+	[+] Probability distribution of the query variable matches the expected results
+	Test marks: [5/5]
+
+Running Test : Variable Elimination Test (Generated Bayes Net 1)
+	[+] Probability distribution of the query variable matches the expected results
+	Test marks: [5/5]
+
+Running Test : Variable Elimination Test (Generated Bayes Net 2)
+	[+] Probability distribution of the query variable matches the expected results
+	Test marks: [5/5]
+
+Running Test : Variable Elimination Test (Generated Bayes Net 3, Large)
+	[+] Probability distribution of the query variable matches the expected results
+	Test marks: [5/5]
+Mark on student tests = 94/100
