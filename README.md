@@ -19,3 +19,6 @@ Implemented Variable Elimination:
 
 Methods: multiply factor, restrict factor, sum out variable, VE takes in a Bayes Net object, query variable, list of Evidence variables, and 
 computes the probability of every possible assignment. 
+
+**Professor:**
+[Fahiem Bacchus](http://www.cs.toronto.edu/~fbacchus/)
