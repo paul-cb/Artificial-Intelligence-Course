@@ -11,7 +11,7 @@ more complex system used by Amazon in their warehouses (see https://www.youtube.
 **A2 - CSP & Propagation**
 
 Implemented two constraint propagation methods: Forward checking propagation and GAC propagation. 
-Represented a sudoku board in two different models both as CSP problems and used propagation methods to solve any given sudoku board.
+Represented a sudoku board in two different models both as CSP problems and used propagation methods to solve a given sudoku board.
 
 **A3 - Bayes Net**
 
