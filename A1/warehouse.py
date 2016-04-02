@@ -97,14 +97,9 @@ class warehouse(StateSpace):
 
         if robots_on_delivery != []:
             earliest_delivery_time_robot = dict()
-            #print(robots_on_delivery)
             earliest_delivery_time_robot[robots_on_delivery[0][0]] = robots_on_delivery[0]
             earliest_delivery_time_robot_key = robots_on_delivery[0][0]
-            #print(earliest_delivery_time_robot)
-            #print(robots_on_delivery[1:])
             for delivering_robot in robots_on_delivery[1:]:
-                #print(earliest_delivery_time_robot[0][3])
-                #print(delivering_robot)
                 if delivering_robot[3] < earliest_delivery_time_robot[earliest_delivery_time_robot_key][3]:
                     earliest_delivery_time_robot = dict()
                     earliest_delivery_time_robot[delivering_robot[0]] = delivering_robot
