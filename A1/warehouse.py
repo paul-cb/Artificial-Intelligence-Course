@@ -138,19 +138,9 @@ class warehouse(StateSpace):
         scpy = copy.deepcopy(self.open_orders)
         for i in rcpy:
            tuple(i)
-            
         for j in scpy:
             tuple(j)
-        #return (str([self.current_time, tuple(rcpy), tuple(scpy)]))
-        #return (tuple((str(self.index))))
         return tuple(str([self.current_time, tuple(rcpy), tuple(scpy)]))
-        #L.append(self.current_time)
-        #L.append(self.current_time)
-        #L.append(tuple(self.robot_status))
-        #L.append(tuple(self.open_orders))
-        #L.extend([self.gval, tuple(self.product_list), tuple(self.packing_station_list), tuple(self.open_orders), tuple(self.robot_status)])
-        #unique = str(self.index)
-        #return tuple(L)  
 
     def print_state(self):
         #DO NOT CHANGE THIS FUNCTION---it will be used in auto marking
