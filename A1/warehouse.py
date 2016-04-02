@@ -67,7 +67,6 @@ class warehouse(StateSpace):
 
         "If there are orders then map each robot to a order covering all combinations"
         if len(open_orders_copy) != 0 and len(idle_robots) !=0 :
-        #  l = len(open_orders_copy)
             for robot in idle_robots:
                 for order in open_orders_copy: 
                     action_str_deliver = "deliver({},{},{})".format(robot[0], order[0], order[1])
@@ -77,30 +76,17 @@ class warehouse(StateSpace):
                     cost_robot_to_product =  abs(robot_location[(0)] - product_location[(0)]) + abs(robot_location[(1)] - product_location[(1)]) 
                     cost_product_to_packing_station = abs(product_location[(0)] - packing_station_location[(0)]) + abs(product_location[(1)] - packing_station_location[(1)])
                     g_value_cost = cost_robot_to_product + cost_product_to_packing_station
-            
-                    #if self.parent != None:
-                        #action = action_str_deliver
-                        #action = ("Action= \"{}\", S{}, g-value = {}, (From S{})".format(action_str_deliver, self.index, g_value_cost, self.parent.index))
-                    #else:
-                        #action = action_str_deliver
-                        #action = ("Action= \"{}\", S{}, g-value = {}, (Initial State)".format(action_str_deliver, self.index, g_value_cost))           
+                      
                     open_orders_alias = copy.deepcopy(self.open_orders)
-                    #open_orders_alias = self.open_orders.copy()
                     open_orders_alias.remove(order)
 
                     robot_status_alias = copy.deepcopy(self.robot_status)
                     robot_status_alias2 = copy.deepcopy(self.robot_status)
-                    #robot_status_alias = self.robot_status.copy()
-                    #robot_status_alias2 = self.robot_status.copy()
                     for robot1 in robot_status_alias:
                         if robot1[0] == robot[0]:
                             robot_temp = [robot[0], "on_delivery", packing_station_location, self.current_time + g_value_cost]
                             robot_status_alias2.remove(robot1)
                             robot_status_alias2.append(robot_temp)
-                            #robot1[1] = "on_delivery"
-                            #robot1[2] = packing_station_location
-                            #robot1.extend([self.current_time + g_value_cost])
-                            #robot1[3] = self.current_time + g_value_cost
 
                     '''
                        Remove possible order from open_orders, 
@@ -114,7 +100,6 @@ class warehouse(StateSpace):
             #print(robots_on_delivery)
             earliest_delivery_time_robot[robots_on_delivery[0][0]] = robots_on_delivery[0]
             earliest_delivery_time_robot_key = robots_on_delivery[0][0]
-            #earliest_delivery_time_robot = earliest_delivery_time_robot + [robots_on_delivery[0]]
             #print(earliest_delivery_time_robot)
             #print(robots_on_delivery[1:])
             for delivering_robot in robots_on_delivery[1:]:
@@ -126,20 +111,8 @@ class warehouse(StateSpace):
                     earliest_delivery_time_robot_key = delivering_robot[0]
                     #print(earliest_delivery_time_robot)
 
-                #elif earliest_delivery_time_robot[0][3] > delivering_robot[3]:
-                    #print(delivering_robot)
-                  #  earliest_delivery_time_robot = []
-                   # earliest_delivery_time_robot = [delivering_robot]
-                    #print("list")
-                    #print(earliest_delivery_time_robot)
                 elif delivering_robot[3] == earliest_delivery_time_robot[earliest_delivery_time_robot_key][3]:
                     earliest_delivery_time_robot[delivering_robot[0]] = delivering_robot
-
-                    #print(earliest_delivery_time_robot)
-                #elif earliest_delivery_time_robot[0][3] == delivering_robot[3]:
-                    #earliest_delivery_time_robot = earliest_delivery_time_robot + [delivering_robot]
-                    #print(earliest_delivery_time_robot)
-            #print(earliest_delivery_time_robot)
 
             '''
             Update robot status to idle not on delivery. 
