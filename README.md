@@ -1,7 +1,7 @@
 # Artificial-Intelligence-Course
 
 
-All assignment specifications can be viewed in aX.pdf in folder Ax where x in {1,2,3}.
+All assignment specifications can be viewed in ax.pdf residing in folder Ax where x in {1,2,3}.
 
 **A1 - Warehouse Delivery A* Search Problem** 
 
