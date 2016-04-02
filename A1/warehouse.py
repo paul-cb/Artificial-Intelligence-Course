@@ -104,7 +104,6 @@ class warehouse(StateSpace):
                     earliest_delivery_time_robot = dict()
                     earliest_delivery_time_robot[delivering_robot[0]] = delivering_robot
                     earliest_delivery_time_robot_key = delivering_robot[0]
-                    #print(earliest_delivery_time_robot)
 
                 elif delivering_robot[3] == earliest_delivery_time_robot[earliest_delivery_time_robot_key][3]:
                     earliest_delivery_time_robot[delivering_robot[0]] = delivering_robot
@@ -114,31 +113,17 @@ class warehouse(StateSpace):
             Update the time of the new state
             '''
             robot_status_shallow = copy.deepcopy(self.robot_status)
-            #robot_status_shallow = self.robot_status.copy()
-            #print(robot_status_shallow)
-            for x in earliest_delivery_time_robot:  
-              #print(x)
-              #for robot in robot_status_shallow:
-                  #print(robot)
-                      spot = robot_status_shallow.index(earliest_delivery_time_robot[x])
-                      robot_status_shallow[spot][1] = "idle"
-                      finish_time = earliest_delivery_time_robot[x][3]
-                      #print(robot)
-                      move_forward_time = robot_status_shallow[spot][3] - self.current_time
-                      move_forward_time = move_forward_time + self.current_time
-                      #print(move_forward_time)
-                      robot_temp = robot_status_shallow[spot][:-1]
-                      #print(robot_temp)
-                      robot_status_shallow.remove(robot_status_shallow[spot])
-                      robot_status_shallow.append(robot_temp)
-                      #print(robot_status_shallow)
-                      action_str_move_forward = "move_forward({})".format(finish_time)
-                      #if self.parent != None:
-                       #   action = action_str_move_forward
-                          #action = ("Action= \"{}\", S{}, g-value = {}, (From S{})".format(action_str_move_forward, self.index, move_forward_time, self.parent.index))
-                      #else:
-                          #action = ("Action= \"{}\", S{}, g-value = {}, (Initial State)".format(action_str_move_forward, self.index, move_forward_time))
-                       #   action = action_str_move_forward
+            for x in earliest_delivery_time_robot:
+                spot = robot_status_shallow.index(earliest_delivery_time_robot[x])
+                robot_status_shallow[spot][1] = "idle"
+                finish_time = earliest_delivery_time_robot[x][3]
+                move_forward_time = robot_status_shallow[spot][3] - self.current_time
+                move_forward_time = move_forward_time + self.current_time
+                robot_temp = robot_status_shallow[spot][:-1]
+                robot_status_shallow.remove(robot_status_shallow[spot])
+                robot_status_shallow.append(robot_temp)
+                action_str_move_forward = "move_forward({})".format(finish_time)
+                      
             warehouse_mf_state = warehouse(action_str_move_forward, self.gval + (finish_time - self.current_time), self.product_list, self.packing_station_list, finish_time, self.open_orders, robot_status_shallow, self)
             successor_states.append(warehouse_mf_state)
 
