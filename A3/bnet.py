@@ -501,43 +501,31 @@ def VE(Net, QueryVar, EvidenceVars):
     x = 1
     for f in lstFactors:
         ## handle when scope is empty
-        #print(f)
-        #print(dLst)
         try:
             f.get_scope()
         except:
             dLst.append(f)
             x = x * f[0]
-        # print(dLst)
-    #[lstFactors.remove(f) for f in dLst]
     for f in dLst:
         lstFactors.remove(f)
-    # print(lstFactors)
 
     order_vars = min_fill_ordering(lstFactors, QueryVar)
-    #print(order_vars)
     for var in order_vars:
         lstF = list()
         for f in lstFactors:
-            #print(lstF) 
             if var in f.get_scope():
                 lstF.append(f)
-        #print(lstF)
-        #check = len(lstFactors) 
         if len(lstF) >= 1:
             multiplyFactors = multiply_factors(lstF)
             multiplyFactors = sum_out_variable(multiplyFactors, var)
         #Remove factors
-        #[lstFactors.remove(f) for f in lstFactors]
         for f in lstF:
             lstFactors.remove(f)
-
         if (multiplyFactors):
             lstFactors.append(multiplyFactors)
     finalFactors  = multiply_factors(lstFactors)
     cap = 1
     for var in finalFactors.get_scope():
-        #print(var.domain_size())
         temp = var.domain_size()
         cap = cap * temp
     i = 0
@@ -546,12 +534,10 @@ def VE(Net, QueryVar, EvidenceVars):
         i += 1 
     #normalize
     norm = finalFactors.values
-    #print(norm)
     total = 0
     for j in norm:
         total += j
     div = float(total)
-    #print(div)
     if div == 0:
         L = list()
         for v in finalFactors.values:
@@ -564,29 +550,24 @@ def VE(Net, QueryVar, EvidenceVars):
             K.append(value)
         return K
 
-
 def helper_void_restrict_evid(factors, evidence):
 
     for f in factors:
         lst = list()
-        ##print(f)
         for e in evidence:
             for var in f.get_scope():
                 ## extract same evidence 
                 if e  == var:
                     lst.append(e)
-    
         #check for evidence variables
         if len(lst) != 0:
             for e in lst:
                 tempE = e.get_evidence()
                 finalFactor = restrict_factor(f, e, tempE)
-
                 #constant check
                 if not finalFactor:
                     factors.remove(f)
                 else:
                     x = factors.index(f)
                     factors[x] = finalFactor
-
                 f = finalFactor
