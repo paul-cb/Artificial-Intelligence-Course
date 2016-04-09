@@ -289,28 +289,19 @@ def create_all_diff_constraints(variables):
 
     return constraints
 
-
 def helper_all_diff(bound):
-
     final_lst = []
     for i in range(0,1):
         final_lst.append([])
-
     for var in bound:
         lst = []
         while len(final_lst) > 0:
             temp = final_lst.pop(0)
-
-
             for value in var.cur_domain():
-
                 if value not in temp:
                     t = temp[:]
                     t.append(value)
                     lst.append(t)
-
         final_lst = lst
-
-
     return final_lst
 
